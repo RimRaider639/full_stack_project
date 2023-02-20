@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import HNav from "./components/navbar/HNav";
+import VNav from "./components/navbar/VNav";
+import { Flex } from "@chakra-ui/react";
+import AllRoutes from "./components/Routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HNav h="10vh" />
+      <Flex h="90vh">
+        <VNav />
+        <AllRoutes />
+      </Flex>
+    </>
   );
 }
 
